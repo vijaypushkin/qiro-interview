@@ -41,6 +41,9 @@
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
   --radius-xl: calc(var(--radius) + 4px);
+
+  --app-m-w: 1440px;
+  --app-text-heading: 1.375rem;
 }
 
 :root {
@@ -118,5 +121,9 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+
+  .text-heading {
+    @apply font-semibold text-(length:--app-text-heading);
   }
 }
