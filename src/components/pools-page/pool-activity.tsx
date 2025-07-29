@@ -23,7 +23,7 @@ const data = Array(4)
           href="#"
           className="text-primary underline underline-offset-2 text-sm"
         >
-          0×90eh...94w9
+          0x90eh...94w9
         </a>
       </div>
     ),

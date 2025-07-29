@@ -22,7 +22,7 @@ const StructureSection: React.FC<StructureSectionProps> = () => {
                 <span className="w-2 h-2 rounded-full bg-[#7C4DFF]" />
                 Senior Tranche Details
               </div>
-              <Badge>Fixed Yield</Badge>
+              <Badge variant="outline">Fixed Yield</Badge>
             </div>
             <div className="grid grid-cols-3 border rounded-xl p-3 text-center text-sm">
               <div>
@@ -46,7 +46,7 @@ const StructureSection: React.FC<StructureSectionProps> = () => {
                 <span className="w-2 h-2 rounded-full bg-[#B388FF]" />
                 Junior Tranche Details
               </div>
-              <Badge variant="secondary">Variable Yield</Badge>
+              <Badge variant="outline">Variable Yield</Badge>
             </div>
             <div className="grid grid-cols-3 border rounded-xl p-3 text-center text-sm">
               <div>
@@ -67,27 +67,27 @@ const StructureSection: React.FC<StructureSectionProps> = () => {
       </div>
 
       {/* Table */}
-      <div className="border rounded-xl overflow-hidden">
-        <div className="grid grid-cols-2 bg-muted text-muted text-sm font-medium px-4 py-2">
+      <div className="border rounded-xl overflow-hidden bg-white">
+        <div className="grid grid-cols-2 text-muted text-sm font-medium px-4 py-[14px]">
           <div>Details</div>
           <div>Description</div>
         </div>
-        <div className="grid grid-cols-2 px-4 py-2 border-t text-sm">
+        <div className="grid grid-cols-2 px-4 py-[27px] border-t text-sm">
           <div className="font-medium">Pool Type</div>
           <div>Senior Tranche</div>
         </div>
-        <div className="grid grid-cols-2 px-4 py-2 border-t text-sm">
+        <div className="grid grid-cols-2 px-4 py-[27px] border-t text-sm">
           <div className="font-medium">Investor Protections</div>
-          <div>20–25% first-loss coverage</div>
+          <div>20-25% first-loss coverage</div>
         </div>
-        <div className="grid grid-cols-2 px-4 py-2 border-t text-sm">
+        <div className="grid grid-cols-2 px-4 py-[27px] border-t text-sm">
           <div className="font-medium">Collateralization</div>
           <div>
             Yes, This loan is secured with real-world, off-chain assets as
             collateral.
           </div>
         </div>
-        <div className="grid grid-cols-2 px-4 py-2 border-t text-sm">
+        <div className="grid grid-cols-2 px-4 py-[27px] border-t text-sm">
           <div className="font-medium">Legal Documents</div>
           <div>
             <Link href="#" className="underline">

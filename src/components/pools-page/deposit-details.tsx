@@ -1,6 +1,6 @@
 const DepositDetails = () => {
   return (
-    <div className="rounded-xl border p-4 space-y-4">
+    <div className="rounded-xl p-4 space-y-4 bg-white">
       <div>
         <div className="text-xs text-muted-foreground">Minimum Investments</div>
         <div className="font-medium">100K</div>

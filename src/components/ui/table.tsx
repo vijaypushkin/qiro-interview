@@ -31,8 +31,8 @@ export const Table: React.FC<TableProps> = ({
       )}
 
       <div className="w-full overflow-auto rounded-xl border bg-white text-sm">
-        <table className="min-w-full border-separate border-spacing-y-2">
-          <thead className="text-left text-xs text-muted-foreground">
+        <table className="min-w-full table-auto">
+          <thead className="text-left text-xs">
             <tr>
               {columns.map((col) => (
                 <th
@@ -49,7 +49,7 @@ export const Table: React.FC<TableProps> = ({
           </thead>
           <tbody>
             {data.map((row, i) => (
-              <tr key={i} className="bg-muted/50 rounded-lg">
+              <tr key={i} className="rounded-lg border">
                 {columns.map((col) => (
                   <td
                     key={col.key}

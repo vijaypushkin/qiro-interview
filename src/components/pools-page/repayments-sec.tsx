@@ -9,6 +9,7 @@ import {
   YAxis,
   ResponsiveContainer,
   Tooltip,
+  Cell,
 } from "recharts";
 
 type RepaymentsSecProps = {};
@@ -48,11 +49,14 @@ const RepaymentsSec: React.FC<RepaymentsSecProps> = () => {
                 tickLine={false}
               />
               <Tooltip />
-              <Bar
-                dataKey="value"
-                radius={[6, 6, 0, 0]}
-                fill="hsl(var(--primary))"
-              />
+              <Bar dataKey="value" radius={[6, 6, 0, 0]} fill="var(--primary)">
+                {chartData.map((x, i) => (
+                  <Cell
+                    key={`cell-${x.date}`}
+                    fill={i > 7 ? "#C8BAFF" : "var(--primary)"}
+                  />
+                ))}
+              </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
