@@ -5,7 +5,7 @@ import { Info } from 'lucide-react';
 const UnderwritingPartnersSection: React.FC = () => {
   return (
     <div className="p-6 border rounded-xl bg-white space-y-6">
-      <div className="flex justify-between items-start">
+      <div className="flex flex-col lg:flex-row gap-4 justify-between items-start">
         <div>
           <h2 className="text-xl font-semibold">Qiro Underwriting Partners</h2>
           <p className="text-muted-foreground text-sm">

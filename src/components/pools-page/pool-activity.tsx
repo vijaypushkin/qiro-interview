@@ -51,7 +51,7 @@ const PoolActivity = async () => {
       columns={columns}
       data={formattedData}
       toolbar={
-        <div className="w-full flex items-center justify-between">
+        <div className="w-full flex md:items-center justify-between flex-col md:flex-row gap-4">
           <input
             type="text"
             placeholder="Search by address"

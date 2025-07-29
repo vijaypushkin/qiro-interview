@@ -22,7 +22,7 @@ export default async function PoolsPage() {
           <DepositSection />
         </div>
 
-        <div className="flex-1 flex flex-col gap-[55px] mt-8 lg:mt-0">
+        <div className="flex-1 flex flex-col gap-[55px] mt-8 lg:mt-0 relative">
           <SectionNav
             sections={[
               'overview',

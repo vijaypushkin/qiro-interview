@@ -29,7 +29,7 @@ const SectionNav: React.FC<{ sections: string[] }> = ({ sections }) => {
   }, [sections]);
 
   return (
-    <nav className="flex gap-4 overflow-x-auto scroll-smooth">
+    <nav className="flex gap-4 overflow-x-auto scroll-smooth sticky top-16 bg-white/50 backdrop-blur-2xl p-4 z-30">
       {sections.map((id) => (
         <a
           key={id}

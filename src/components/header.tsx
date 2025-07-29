@@ -17,9 +17,9 @@ const Header: React.FC = () => {
 
   return (
     <>
-      <header className="fixed top-0 left-0 w-full z-50 bg-white border-b">
+      <header className="fixed top-0 left-0 w-full z-50 bg-white/60 border-b backdrop-blur-2xl">
         <div className="flex items-center justify-between h-16 max-w-(--app-m-w) mx-auto px-4">
-          <div className="flex items-center gap-6">
+          <div className="flex items-center gap-2 md:gap-6">
             <Image
               src="/qiro.svg"
               alt="logo"
@@ -74,7 +74,7 @@ const Header: React.FC = () => {
                 width={20}
                 height={20}
               />
-              0x48ce....ht56
+              <span className="hidden md:block">0x48ce....ht56</span>
             </div>
             <div className="w-9 h-9 rounded-full bg-[#6C76F8] text-white flex items-center justify-center text-sm font-semibold">
               TH
