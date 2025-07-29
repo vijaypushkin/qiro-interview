@@ -20,7 +20,7 @@ const Header: React.FC = () => {
       <header className="fixed top-0 left-0 w-full z-50 bg-white border-b">
         <div className="flex items-center justify-between h-16 max-w-(--app-m-w) mx-auto px-4">
           <div className="flex items-center gap-6">
-            <img src="/qiro.svg" alt="logo" className="h-6" />
+            <Image src="/qiro.svg" alt="logo" className="h-6" height={24} />
             <nav className="flex items-center gap-4 h-6">
               <Link
                 href={'/pools'}

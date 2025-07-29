@@ -13,9 +13,7 @@ import {
 import { Card, CardContent } from '@/components/ui/card';
 import { Table } from '@/components/ui/table';
 
-type RepaymentsSecProps = {};
-
-const RepaymentsSec: React.FC<RepaymentsSecProps> = () => {
+const RepaymentsSec: React.FC = () => {
   const chartData = [
     { date: '11 Jan', value: 6.8 },
     { date: '26 Jan', value: 5.6 },

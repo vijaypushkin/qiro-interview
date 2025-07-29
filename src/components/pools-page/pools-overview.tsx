@@ -1,5 +1,4 @@
 import { AppTooltip } from '../ui/app-tooltip';
-import { Button } from '../ui/button';
 
 const PoolsOverview: React.FC = () => {
   return (

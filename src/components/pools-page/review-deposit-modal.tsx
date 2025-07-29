@@ -1,6 +1,6 @@
 'use client';
 
-import { use, useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 
 import { Close as DialogClose } from '@radix-ui/react-dialog';
 import { MoveUpRight, X } from 'lucide-react';
@@ -26,6 +26,7 @@ const ReviewDepositModal = () => {
   const priceInUSD = useUsdPrice(inputValue, usdcPrice ?? 0);
 
   const [step, setStep] = useState<1 | 2 | 3 | 4>(1);
+
   const handleClick = () => {
     setStep(2);
 
@@ -53,7 +54,7 @@ const ReviewDepositModal = () => {
       default:
         return '';
     }
-  }, [step]);
+  }, [step, active]);
 
   return (
     <div className="">
@@ -81,9 +82,7 @@ const ReviewDepositModal = () => {
           </div>
         </div>
 
-        {(step === 1 || step === 4) && (
-          <TxDetails step={step} onClick={handleClick} />
-        )}
+        {(step === 1 || step === 4) && <TxDetails step={step} />}
       </div>
 
       {step === 1 && (
@@ -111,10 +110,7 @@ const ReviewDepositModal = () => {
   );
 };
 
-const TxDetails: React.FC<{ step: 1 | 4; onClick: () => void }> = ({
-  step,
-  onClick,
-}) => {
+const TxDetails: React.FC<{ step: 1 | 4 }> = ({ step }) => {
   return (
     <>
       <div className="bg-radial from-[#CACACA] from-40% to-white h-px w-full" />

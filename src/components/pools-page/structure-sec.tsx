@@ -4,9 +4,7 @@ import { Badge } from '@/components/ui/badge';
 
 import { DonutChart } from '../charts/donut-chart';
 
-type StructureSectionProps = {};
-
-const StructureSection: React.FC<StructureSectionProps> = () => {
+const StructureSection: React.FC = () => {
   return (
     <section className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">

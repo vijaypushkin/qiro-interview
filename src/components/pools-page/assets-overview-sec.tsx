@@ -1,8 +1,6 @@
 import { Info } from 'lucide-react';
 
-type AssetOverviewSectionProps = {};
-
-const AssetOverviewSection: React.FC<AssetOverviewSectionProps> = () => {
+const AssetOverviewSection: React.FC = () => {
   return (
     <section className="space-y-4">
       <div>

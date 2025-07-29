@@ -15,12 +15,14 @@ const getUSDCPrice = async () => {
     }
 
     return res['usd-coin'].usd;
-  } catch (error: any) {
-    throw new Error(
-      `Failed to fetch USDC price from CoinGecko API: ${
-        error?.message || error
-      }`,
-    );
+  } catch (error: unknown) {
+    if (error instanceof Error) {
+      throw new Error(
+        `Failed to fetch USDC price from CoinGecko API: ${
+          error?.message || error
+        }`,
+      );
+    }
   }
 };
 
