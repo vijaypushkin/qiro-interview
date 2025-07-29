@@ -8,8 +8,11 @@ import { RepaymentsSec } from '@/components/pools-page/repayments-sec';
 import { StructureSection } from '@/components/pools-page/structure-sec';
 import { UnderwritingPartnersSection } from '@/components/pools-page/underwriters-sec';
 import { SectionNav } from '@/components/ui/section-nav';
+import { getRepaymentData } from '@/server/get-repayment-data';
 
-export default function PoolsPage() {
+export default async function PoolsPage() {
+  const { chartData, payments } = await getRepaymentData();
+
   return (
     <main className="flex flex-col mb-8">
       <FeaturedLoanCard />
@@ -46,7 +49,7 @@ export default function PoolsPage() {
           <section id="repayment" className="scroll-mt-18">
             <h2 className="text-heading mb-[26px]">Repayments</h2>
 
-            <RepaymentsSec />
+            <RepaymentsSec chartData={chartData} payments={payments} />
           </section>
 
           <section id="assets" className="scroll-mt-18">
