@@ -2,7 +2,7 @@ import { Info } from 'lucide-react';
 
 const AssetOverviewSection: React.FC = () => {
   return (
-    <section className="space-y-4">
+    <div className="space-y-4">
       <div>
         <h2 className="text-heading">Fintech Agency LLC</h2>
         <p className="">
@@ -34,7 +34,7 @@ const AssetOverviewSection: React.FC = () => {
           <div className="text-lg font-medium">Apr 06, 2025</div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 

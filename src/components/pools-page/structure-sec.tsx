@@ -6,7 +6,7 @@ import { DonutChart } from '../charts/donut-chart';
 
 const StructureSection: React.FC = () => {
   return (
-    <section className="space-y-6">
+    <div className="space-y-6">
       <div className="flex flex-col md:flex-row gap-6">
         {/* Chart + APR */}
         <div className="w-full md:w-1/3 flex flex-col items-center justify-center">
@@ -96,7 +96,7 @@ const StructureSection: React.FC = () => {
           </div>
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
