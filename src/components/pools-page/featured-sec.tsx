@@ -2,6 +2,8 @@ import React from 'react';
 
 import Image from 'next/image';
 
+import { cn } from '@/utils/ui.utils';
+
 import globalImg from '@/assets/images/icons/global.svg';
 import linkedImg from '@/assets/images/icons/linkedin.svg';
 import twitterImg from '@/assets/images/icons/twitter.svg';
@@ -9,19 +11,12 @@ import featureImg from '@/assets/images/pools/pool-feature.png';
 
 const FeaturedLoanCard: React.FC = () => {
   return (
-    <div className="relative w-full h-[400px] lg:h-[352px] bg-cover bg-center overflow-hidden">
-      {/* Overlay */}
-      <div className="absolute inset-0">
-        <Image
-          src={featureImg}
-          alt="usa boston buildings"
-          fill={true}
-          objectFit="cover"
-        />
-      </div>
-
+    <div
+      className={cn('w-full bg-cover bg-center overflow-hidden')}
+      style={{ backgroundImage: `url(${featureImg.src})` }}
+    >
       {/* Content */}
-      <div className="absolute inset-0 text-white px-4 py-6 flex flex-col justify-between mx-auto lg:max-w-(--app-m-w)">
+      <div className="text-white px-4 py-6 flex flex-col justify-between mx-auto lg:max-w-(--app-m-w)">
         <div className="space-y-2">
           <button className="text-lg">&larr;</button>
           <p className="text-xl font-medium">Featured Loan</p>
