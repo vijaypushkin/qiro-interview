@@ -25,22 +25,22 @@ const PoolsOverview: React.FC = () => {
       </div>
 
       {/* Stats */}
-      <div className="grid grid-cols-3 gap-4 rounded-2xl border p-4">
-        <div className="space-y-1">
+      <div className="grid grid-cols-3 divide-x rounded-2xl border p-4">
+        <div className="space-y-1 px-7">
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
             Estimated APY
             <AppTooltip className="w-4 h-4">Capacity of the pool</AppTooltip>
           </div>
           <div className="text-2xl font-semibold">14%</div>
         </div>
-        <div className="space-y-1">
+        <div className="space-y-1 px-7">
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
             Capital Formation
             <AppTooltip className="w-4 h-4">Capacity of the pool</AppTooltip>
           </div>
           <div className="text-2xl font-semibold">30 Days</div>
         </div>
-        <div className="space-y-1">
+        <div className="space-y-1 px-7">
           <div className="flex items-center gap-1 text-sm text-muted-foreground">
             Loan Term
             <AppTooltip className="w-4 h-4">Capacity of the pool</AppTooltip>

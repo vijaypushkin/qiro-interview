@@ -40,7 +40,7 @@ const SectionNav: React.FC<{ sections: string[] }> = ({ sections }) => {
               : "text-muted-foreground"
           )}
         >
-          {id.replace("-", " ").replace(/\b\w/g, (l) => l.toUpperCase())}
+          {id.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
         </a>
       ))}
     </nav>

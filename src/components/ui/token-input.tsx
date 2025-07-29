@@ -51,7 +51,7 @@ const TokenInput: React.FC<{ usdcPrice: number }> = ({ usdcPrice }) => {
       />
 
       <div className="flex justify-between text-sm text-muted-foreground items-baseline mt-1">
-        <span>${priceInUSD}</span>
+        <span>${priceInUSD.toFixed(2)}</span>
         <span className="text-xs">
           {MAX_USDC} USDC{" "}
           <Button

@@ -2,6 +2,7 @@ import { Table } from "@/components/ui/table";
 import { Avatar, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
 import { ExternalLinkIcon } from "lucide-react";
+import { getPoolActivity } from "@/server/get-pool-activity";
 
 const columns = [
   { key: "wallet", label: "Wallet", sortable: true },
@@ -11,9 +12,10 @@ const columns = [
   { key: "tx", label: "", sortable: false },
 ];
 
-const data = Array(4)
-  .fill(0)
-  .map(() => ({
+const PoolActivity = async () => {
+  const data = await getPoolActivity();
+
+  const formattedData = data.map((item) => ({
     wallet: (
       <div className="flex items-center gap-2">
         <Avatar className="h-6 w-6">
@@ -23,15 +25,15 @@ const data = Array(4)
           href="#"
           className="text-primary underline underline-offset-2 text-sm"
         >
-          0x90eh...94w9
+          {item.wallet}
         </a>
       </div>
     ),
-    txType: <span className="text-sm">Invest</span>,
+    txType: <span className="text-sm">{item.txType}</span>,
     amount: (
-      <span className="text-sm font-medium text-green-600">+$ 6.7K USDC</span>
+      <span className="text-sm font-medium text-green-600">{item.amount}</span>
     ),
-    date: <span className="text-sm">5 Mar, 2025</span>,
+    date: <span className="text-sm">{item.date}</span>,
     tx: (
       <Button
         variant="ghost"
@@ -43,11 +45,10 @@ const data = Array(4)
     ),
   }));
 
-const PoolActivity = () => {
   return (
     <Table
       columns={columns}
-      data={data}
+      data={formattedData}
       toolbar={
         <div className="w-full flex items-center justify-between">
           <input

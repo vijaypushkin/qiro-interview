@@ -24,7 +24,7 @@ const StructureSection: React.FC<StructureSectionProps> = () => {
               </div>
               <Badge variant="outline">Fixed Yield</Badge>
             </div>
-            <div className="grid grid-cols-3 border rounded-xl p-3 text-center text-sm">
+            <div className="grid grid-cols-3 border rounded-xl p-3 text-center text-sm divide-x">
               <div>
                 <div className="text-muted">Allocation</div>
                 <div className="font-medium">80 %</div>
@@ -48,7 +48,7 @@ const StructureSection: React.FC<StructureSectionProps> = () => {
               </div>
               <Badge variant="outline">Variable Yield</Badge>
             </div>
-            <div className="grid grid-cols-3 border rounded-xl p-3 text-center text-sm">
+            <div className="grid grid-cols-3 border rounded-xl p-3 text-center text-sm divide-x">
               <div>
                 <div className="text-muted">Allocation</div>
                 <div className="font-medium">20 %</div>
