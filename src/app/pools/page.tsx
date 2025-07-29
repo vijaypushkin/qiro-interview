@@ -17,12 +17,12 @@ export default async function PoolsPage() {
     <main className="flex flex-col mb-8">
       <FeaturedLoanCard />
 
-      <div className="flex flex-col p-4 lg:p-0 lg:flex-row-reverse mt-10 lg:gap-[37px]  mx-auto max-w-(--app-m-w) px-4">
+      <div className="flex flex-col p-4 lg:p-0 lg:flex-row-reverse mt-10 lg:gap-[37px]  mx-auto w-full max-w-screen lg:max-w-(--app-m-w) px-4">
         <div className="lg:w-[520px] pt-5">
           <DepositSection />
         </div>
 
-        <div className="flex-1 flex flex-col gap-[55px]">
+        <div className="flex-1 flex flex-col gap-[55px] mt-8 lg:mt-0">
           <SectionNav
             sections={[
               'overview',

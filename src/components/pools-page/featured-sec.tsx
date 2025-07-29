@@ -9,7 +9,7 @@ import featureImg from '@/assets/images/pools/pool-feature.png';
 
 const FeaturedLoanCard: React.FC = () => {
   return (
-    <div className="relative w-full h-[352px] bg-cover bg-center overflow-hidden">
+    <div className="relative w-full h-[400px] lg:h-[352px] bg-cover bg-center overflow-hidden">
       {/* Overlay */}
       <div className="absolute inset-0">
         <Image
@@ -21,7 +21,7 @@ const FeaturedLoanCard: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="absolute inset-0 text-white px-4 py-6 flex flex-col justify-between  mx-auto max-w-(--app-m-w)">
+      <div className="absolute inset-0 text-white px-4 py-6 flex flex-col justify-between mx-auto lg:max-w-(--app-m-w)">
         <div className="space-y-2">
           <button className="text-lg">&larr;</button>
           <p className="text-xl font-medium">Featured Loan</p>
@@ -42,20 +42,22 @@ const FeaturedLoanCard: React.FC = () => {
         </div>
 
         {/* Metrics */}
-        <div className="flex items-center gap-4 mt-4">
-          <div className="bg-white/10 rounded-xl px-4 py-3 text-left">
-            <p className="text-sm">Estimated APY</p>
-            <p className="text-[28px]  font-semibold">14%</p>
+        <div className="flex lg:items-center justify-between flex-col lg:flex-row lg:gap-0 gap-4">
+          <div className="flex gap-4 flex-row">
+            <div className="bg-white/10 rounded-xl px-4 py-3 text-left">
+              <p className="text-sm">Estimated APY</p>
+              <p className="text-[28px]  font-semibold">14%</p>
+            </div>
+            <div className="bg-white/10 rounded-xl px-4 py-3 text-left">
+              <p className="text-sm">Minimum Investment</p>
+              <p className="text-[28px] font-semibold">$100K</p>
+            </div>
+            <div className="bg-white/10 rounded-xl px-4 py-3 text-left">
+              <p className="text-sm">Total Value Locked</p>
+              <p className="text-[28px]  font-semibold">$5M</p>
+            </div>
           </div>
-          <div className="bg-white/10 rounded-xl px-4 py-3 text-left">
-            <p className="text-sm">Minimum Investment</p>
-            <p className="text-[28px] font-semibold">$100K</p>
-          </div>
-          <div className="bg-white/10 rounded-xl px-4 py-3 text-left">
-            <p className="text-sm">Total Value Locked</p>
-            <p className="text-[28px]  font-semibold">$5M</p>
-          </div>
-          <div className="ml-auto flex gap-2">
+          <div className="lg:ml-auto flex gap-2">
             <a
               className="bg-[#f7f7f7]/74 hover:bg-white/74 text-sm rounded-full px-4 py-2 flex items-center gap-2 text-black"
               href="https://www.qiro.fi/"

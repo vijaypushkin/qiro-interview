@@ -20,7 +20,7 @@ const DepositSection: React.FC = () => {
 
   return (
     <div className="space-y-4">
-      <div className="inline-flex rounded-full w-full  p-1 gap-1">
+      <div className="inline-flex rounded-full max-w-screen w-full p-1 gap-1">
         <Button
           onClick={() => setActive('deposit')}
           className={`px-6 py-2 text-sm font-semibold rounded-full transition-colors w-1/2 ${

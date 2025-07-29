@@ -35,7 +35,7 @@ const SectionNav: React.FC<{ sections: string[] }> = ({ sections }) => {
           key={id}
           href={`#${id}`}
           className={clsx(
-            'text-sm font-medium px-4 py-1.5 rounded-full transition-colors',
+            'text-sm font-medium px-4 py-1.5 rounded-full transition-colors whitespace-nowrap',
             activeId === id
               ? 'bg-[#8A50F7] text-white'
               : 'text-muted-foreground',
