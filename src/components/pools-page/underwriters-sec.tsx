@@ -1,5 +1,6 @@
-import { Info } from "lucide-react";
-import React from "react";
+import React from 'react';
+
+import { Info } from 'lucide-react';
 
 const UnderwritingPartnersSection: React.FC = () => {
   return (

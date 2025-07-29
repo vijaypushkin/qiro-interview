@@ -1,17 +1,21 @@
-"use client";
+'use client';
 
-import { use, useMemo, useState } from "react";
-import { DialogTitle } from "../ui/dialog";
-import { usePoolStore } from "@/store/pools.store";
-import { useUSDCPriceQuery } from "@/hooks/queries/usdc-price.query";
-import { useUsdPrice } from "@/hooks/get-usd-price";
-import { Button } from "../ui/button";
-import { cn } from "@/utils/ui.utils";
-import { MoveUpRight, X } from "lucide-react";
-import Image from "next/image";
-import copyIcon from "@/assets/images/icons/copy.svg";
-import successIcon from "@/assets/images/icons/success.svg";
-import { Close as DialogClose } from "@radix-ui/react-dialog";
+import { use, useMemo, useState } from 'react';
+
+import { Close as DialogClose } from '@radix-ui/react-dialog';
+import { MoveUpRight, X } from 'lucide-react';
+import Image from 'next/image';
+
+import { useUsdPrice } from '@/hooks/get-usd-price';
+import { useUSDCPriceQuery } from '@/hooks/queries/usdc-price.query';
+import { usePoolStore } from '@/store/pools.store';
+import { cn } from '@/utils/ui.utils';
+
+import { Button } from '../ui/button';
+import { DialogTitle } from '../ui/dialog';
+
+import copyIcon from '@/assets/images/icons/copy.svg';
+import successIcon from '@/assets/images/icons/success.svg';
 
 const ReviewDepositModal = () => {
   const { data: usdcPrice } = useUSDCPriceQuery();
@@ -33,21 +37,21 @@ const ReviewDepositModal = () => {
   const title = useMemo(() => {
     switch (step) {
       case 1:
-        return `Review ${active === "deposit" ? "Deposit" : "Withdrawal"}`;
+        return `Review ${active === 'deposit' ? 'Deposit' : 'Withdrawal'}`;
       case 2:
       case 3:
-        return "Confirm";
+        return 'Confirm';
       case 4:
         return (
           <div className="flex items-center gap-2">
             <Image src={successIcon} alt="copy" width={46} height={46} />
             <span className="">
-              {active === "deposit" ? "Deposit" : "Withdrawal"} Successful
+              {active === 'deposit' ? 'Deposit' : 'Withdrawal'} Successful
             </span>
           </div>
         );
       default:
-        return "";
+        return '';
     }
   }, [step]);
 
@@ -85,10 +89,10 @@ const ReviewDepositModal = () => {
       {step === 1 && (
         <>
           <p className="mt-4 text-xs text-muted-foreground text-center">
-            By confirming this transaction, you agree to the{" "}
+            By confirming this transaction, you agree to the{' '}
             <a href="#" className="underline">
               Terms of Use
-            </a>{" "}
+            </a>{' '}
             and the services provisions relating to the morpho Vault.
           </p>
           <Button
@@ -156,7 +160,7 @@ const TxDetails: React.FC<{ step: 1 | 4; onClick: () => void }> = ({
                 <button
                   className="h-3 w-3"
                   onClick={() =>
-                    navigator.clipboard.writeText("0x48Ybuy8c9e04u")
+                    navigator.clipboard.writeText('0x48Ybuy8c9e04u')
                   }
                 >
                   <Image src={copyIcon} alt="copy" width={20} height={20} />
@@ -173,12 +177,12 @@ const TxDetails: React.FC<{ step: 1 | 4; onClick: () => void }> = ({
 const TxProgress: React.FC<{
   step: 2 | 3;
   amount: string;
-  active: "deposit" | "withdraw";
+  active: 'deposit' | 'withdraw';
 }> = ({ step, amount, active }) => {
   return (
     <div className="w-full space-y-3 text-center">
       <p className="text-sm font-medium">
-        Approve {active === "deposit" ? "Deposit" : "Withdrawal"} of {amount}{" "}
+        Approve {active === 'deposit' ? 'Deposit' : 'Withdrawal'} of {amount}{' '}
         USDC
       </p>
 
@@ -186,20 +190,20 @@ const TxProgress: React.FC<{
         <div className="h-2 rounded-full bg-[#8A50F7] w-1/2" />
         <div
           className={cn(
-            "h-2 rounded-full w-1/2 bg-[#D9D2EF] relative overflow-hidden"
+            'h-2 rounded-full w-1/2 bg-[#D9D2EF] relative overflow-hidden',
           )}
         >
           <div
             className={cn(
-              "absolute top-0 left-0 h-full bg-[#8A50F7] transition-all duration-1000 ease-in-out",
-              step === 2 ? "w-0" : "w-full"
+              'absolute top-0 left-0 h-full bg-[#8A50F7] transition-all duration-1000 ease-in-out',
+              step === 2 ? 'w-0' : 'w-full',
             )}
           />
         </div>
       </div>
 
       <p className="text-sm text-muted-foreground">
-        Signature {step === 2 ? "1" : "2"} / 2 - Proceed in your wallet
+        Signature {step === 2 ? '1' : '2'} / 2 - Proceed in your wallet
       </p>
     </div>
   );

@@ -1,13 +1,13 @@
-import { AssetOverviewSection } from "@/components/pools-page/assets-overview-sec";
-import { DepositSection } from "@/components/pools-page/deposit-section";
-import { FeaturedLoanCard } from "@/components/pools-page/featured-sec";
-import { PoolActivity } from "@/components/pools-page/pool-activity";
-import { PoolHighlightSec } from "@/components/pools-page/pool-highlight-sec";
-import { PoolsOverview } from "@/components/pools-page/pools-overview";
-import { RepaymentsSec } from "@/components/pools-page/repayments-sec";
-import { StructureSection } from "@/components/pools-page/structure-sec";
-import { UnderwritingPartnersSection } from "@/components/pools-page/underwriters-sec";
-import { SectionNav } from "@/components/ui/section-nav";
+import { AssetOverviewSection } from '@/components/pools-page/assets-overview-sec';
+import { DepositSection } from '@/components/pools-page/deposit-section';
+import { FeaturedLoanCard } from '@/components/pools-page/featured-sec';
+import { PoolActivity } from '@/components/pools-page/pool-activity';
+import { PoolHighlightSec } from '@/components/pools-page/pool-highlight-sec';
+import { PoolsOverview } from '@/components/pools-page/pools-overview';
+import { RepaymentsSec } from '@/components/pools-page/repayments-sec';
+import { StructureSection } from '@/components/pools-page/structure-sec';
+import { UnderwritingPartnersSection } from '@/components/pools-page/underwriters-sec';
+import { SectionNav } from '@/components/ui/section-nav';
 
 export default function PoolsPage() {
   return (
@@ -22,13 +22,13 @@ export default function PoolsPage() {
         <div className="flex-1 flex flex-col gap-[55px]">
           <SectionNav
             sections={[
-              "overview",
-              "highlights",
-              "repayment",
-              "assets",
-              "structure",
-              "underwriters",
-              "pool-activity",
+              'overview',
+              'highlights',
+              'repayment',
+              'assets',
+              'structure',
+              'underwriters',
+              'pool-activity',
             ]}
           />
           <section id="overview" className="scroll-mt-18">

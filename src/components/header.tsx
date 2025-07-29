@@ -1,13 +1,16 @@
-"use client";
+'use client';
 
-import Image from "next/image";
-import { PoolIcon } from "./icons/pool.icon";
-import { PositionIcon } from "./icons/position.icon";
-import bellIcon from "@/assets/images/icons/bell.svg";
-import userIcon from "@/assets/images/icons/user.svg";
-import { usePathname } from "next/navigation";
-import { cn } from "@/utils/ui.utils";
-import Link from "next/link";
+import Image from 'next/image';
+import Link from 'next/link';
+import { usePathname } from 'next/navigation';
+
+import { cn } from '@/utils/ui.utils';
+
+import { PoolIcon } from './icons/pool.icon';
+import { PositionIcon } from './icons/position.icon';
+
+import bellIcon from '@/assets/images/icons/bell.svg';
+import userIcon from '@/assets/images/icons/user.svg';
 
 const Header: React.FC = () => {
   const pathname = usePathname();
@@ -20,24 +23,24 @@ const Header: React.FC = () => {
             <img src="/qiro.svg" alt="logo" className="h-6" />
             <nav className="flex items-center gap-4 h-6">
               <Link
-                href={"/pools"}
+                href={'/pools'}
                 className={cn(
-                  "flex items-center gap-1 text-sm font-medium text-black border-b-2 py-5",
-                  pathname === "/pools"
-                    ? "border-purple-600"
-                    : "border-transparent"
+                  'flex items-center gap-1 text-sm font-medium text-black border-b-2 py-5',
+                  pathname === '/pools'
+                    ? 'border-purple-600'
+                    : 'border-transparent',
                 )}
               >
                 <PositionIcon className="h-5 w-5" />
                 Pools
               </Link>
               <Link
-                href={"/positions"}
+                href={'/positions'}
                 className={cn(
-                  "flex items-center gap-1 text-sm font-medium text-black border-b-2 py-5",
-                  pathname === "/positions"
-                    ? "border-purple-600"
-                    : "border-transparent"
+                  'flex items-center gap-1 text-sm font-medium text-black border-b-2 py-5',
+                  pathname === '/positions'
+                    ? 'border-purple-600'
+                    : 'border-transparent',
                 )}
               >
                 <PoolIcon className="h-5 w-5" />

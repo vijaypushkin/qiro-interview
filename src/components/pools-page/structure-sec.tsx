@@ -1,6 +1,8 @@
-import { Badge } from "@/components/ui/badge";
-import Link from "next/link";
-import { DonutChart } from "../charts/donut-chart";
+import Link from 'next/link';
+
+import { Badge } from '@/components/ui/badge';
+
+import { DonutChart } from '../charts/donut-chart';
 
 type StructureSectionProps = {};
 

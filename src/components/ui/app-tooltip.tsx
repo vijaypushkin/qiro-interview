@@ -1,9 +1,10 @@
-import React from "react";
+import React from 'react';
+
 import {
   Tooltip,
   TooltipContent,
   TooltipTrigger,
-} from "@/components/ui/tooltip";
+} from '@/components/ui/tooltip';
 
 const AppTooltip: React.FC<{
   className?: string;

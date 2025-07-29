@@ -1,14 +1,14 @@
-"use client";
+'use client';
 
-import { usePoolStore } from "@/store/pools.store";
-import { Button } from "../ui/button";
-import { Dialog, DialogContent, DialogTrigger } from "../ui/dialog";
-import { TokenInput } from "../ui/token-input";
-import { DepositDetails } from "./deposit-details";
-import { ReviewDepositModal } from "./review-deposit-modal";
-import { UserActivities } from "./user-activities";
+import { useUSDCPriceQuery } from '@/hooks/queries/usdc-price.query';
+import { usePoolStore } from '@/store/pools.store';
 
-import { useUSDCPriceQuery } from "@/hooks/queries/usdc-price.query";
+import { Button } from '../ui/button';
+import { Dialog, DialogContent, DialogTrigger } from '../ui/dialog';
+import { TokenInput } from '../ui/token-input';
+import { DepositDetails } from './deposit-details';
+import { ReviewDepositModal } from './review-deposit-modal';
+import { UserActivities } from './user-activities';
 
 const DepositSection: React.FC = () => {
   const { data: usdcPrice } = useUSDCPriceQuery();
@@ -22,21 +22,21 @@ const DepositSection: React.FC = () => {
     <div className="space-y-4">
       <div className="inline-flex rounded-full w-full  p-1 gap-1">
         <Button
-          onClick={() => setActive("deposit")}
+          onClick={() => setActive('deposit')}
           className={`px-6 py-2 text-sm font-semibold rounded-full transition-colors w-1/2 ${
-            active === "deposit"
-              ? "bg-[#7544EA] text-white"
-              : "bg-white text-black hover:text-white hover:bg-[#7544EA]/80"
+            active === 'deposit'
+              ? 'bg-[#7544EA] text-white'
+              : 'bg-white text-black hover:text-white hover:bg-[#7544EA]/80'
           }`}
         >
           Deposit
         </Button>
         <Button
-          onClick={() => setActive("withdraw")}
+          onClick={() => setActive('withdraw')}
           className={`px-6 py-2 text-sm font-semibold rounded-full transition-colors  w-1/2 ${
-            active === "withdraw"
-              ? "bg-[#7544EA] text-white"
-              : "bg-white text-black hover:text-white hover:bg-[#7544EA]/80"
+            active === 'withdraw'
+              ? 'bg-[#7544EA] text-white'
+              : 'bg-white text-black hover:text-white hover:bg-[#7544EA]/80'
           }`}
         >
           Withdraw
@@ -52,8 +52,8 @@ const DepositSection: React.FC = () => {
             disabled={!isInputValid}
           >
             {isInputValid
-              ? `Review ${active === "deposit" ? "Deposit" : "Withdrawal"}`
-              : "Enter an Amount"}
+              ? `Review ${active === 'deposit' ? 'Deposit' : 'Withdrawal'}`
+              : 'Enter an Amount'}
           </Button>
         </DialogTrigger>
 

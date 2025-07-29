@@ -1,10 +1,11 @@
-import React from "react";
-import featureImg from "@/assets/images/pools/pool-feature.png";
-import linkedImg from "@/assets/images/icons/linkedin.svg";
-import globalImg from "@/assets/images/icons/global.svg";
-import twitterImg from "@/assets/images/icons/twitter.svg";
+import React from 'react';
 
-import Image from "next/image";
+import Image from 'next/image';
+
+import globalImg from '@/assets/images/icons/global.svg';
+import linkedImg from '@/assets/images/icons/linkedin.svg';
+import twitterImg from '@/assets/images/icons/twitter.svg';
+import featureImg from '@/assets/images/pools/pool-feature.png';
 
 const FeaturedLoanCard: React.FC = () => {
   return (

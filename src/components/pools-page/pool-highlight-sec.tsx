@@ -1,9 +1,11 @@
-import Image from "next/image";
-import { PoolHighlightCard } from "./pool-highlight-card";
-import protection from "@/assets/images/pools/protection.svg";
-import global from "@/assets/images/pools/global.svg";
-import secure from "@/assets/images/pools/secure.svg";
-import transparent from "@/assets/images/pools/transparent.svg";
+import Image from 'next/image';
+
+import { PoolHighlightCard } from './pool-highlight-card';
+
+import global from '@/assets/images/pools/global.svg';
+import protection from '@/assets/images/pools/protection.svg';
+import secure from '@/assets/images/pools/secure.svg';
+import transparent from '@/assets/images/pools/transparent.svg';
 
 const PoolHighlightSec: React.FC = () => {
   return (

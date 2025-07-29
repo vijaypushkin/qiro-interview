@@ -1,19 +1,20 @@
-"use client";
+'use client';
 
-import { useEffect, useState } from "react";
-import clsx from "clsx";
+import { useEffect, useState } from 'react';
+
+import clsx from 'clsx';
 
 const SectionNav: React.FC<{ sections: string[] }> = ({ sections }) => {
   const [activeId, setActiveId] = useState(sections[0]);
 
   useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
+    document.documentElement.style.scrollBehavior = 'smooth';
     const observer = new IntersectionObserver(
       (entries) => {
         const visible = entries.find((e) => e.isIntersecting);
         if (visible) setActiveId(visible.target.id);
       },
-      { rootMargin: "0px 0px -64px 0px", threshold: 0.3 }
+      { rootMargin: '0px 0px -64px 0px', threshold: 0.3 },
     );
 
     sections.forEach((id) => {
@@ -23,7 +24,7 @@ const SectionNav: React.FC<{ sections: string[] }> = ({ sections }) => {
 
     return () => {
       observer.disconnect();
-      document.documentElement.style.scrollBehavior = "";
+      document.documentElement.style.scrollBehavior = '';
     };
   }, [sections]);
 
@@ -34,13 +35,13 @@ const SectionNav: React.FC<{ sections: string[] }> = ({ sections }) => {
           key={id}
           href={`#${id}`}
           className={clsx(
-            "text-sm font-medium px-4 py-1.5 rounded-full transition-colors",
+            'text-sm font-medium px-4 py-1.5 rounded-full transition-colors',
             activeId === id
-              ? "bg-[#8A50F7] text-white"
-              : "text-muted-foreground"
+              ? 'bg-[#8A50F7] text-white'
+              : 'text-muted-foreground',
           )}
         >
-          {id.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase())}
+          {id.replace(/-/g, ' ').replace(/\b\w/g, (l) => l.toUpperCase())}
         </a>
       ))}
     </nav>

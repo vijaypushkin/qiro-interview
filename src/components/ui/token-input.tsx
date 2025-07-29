@@ -1,9 +1,10 @@
-"use client";
+'use client';
 
-import { useMemo, useState } from "react";
-import { Button } from "@/components/ui/button";
-import { usePoolStore } from "@/store/pools.store";
-import { useUsdPrice } from "@/hooks/get-usd-price";
+import { useMemo, useState } from 'react';
+
+import { Button } from '@/components/ui/button';
+import { useUsdPrice } from '@/hooks/get-usd-price';
+import { usePoolStore } from '@/store/pools.store';
 
 const MAX_USDC = 45.12; // Example max value, adjust as needed
 
@@ -13,7 +14,7 @@ const TokenInput: React.FC<{ usdcPrice: number }> = ({ usdcPrice }) => {
 
   const active = usePoolStore((state) => state.active);
 
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   const priceInUSD = useUsdPrice(value, usdcPrice);
 
@@ -25,7 +26,7 @@ const TokenInput: React.FC<{ usdcPrice: number }> = ({ usdcPrice }) => {
       if (!isNaN(numericVal) && numericVal > MAX_USDC) {
         setError(`Amount cannot exceed ${MAX_USDC} USDC`);
       } else {
-        setError("");
+        setError('');
       }
       setValue(val);
     }
@@ -33,7 +34,7 @@ const TokenInput: React.FC<{ usdcPrice: number }> = ({ usdcPrice }) => {
 
   const handleMaxClick = () => {
     setValue(MAX_USDC.toString());
-    setError("");
+    setError('');
   };
 
   return (
@@ -53,7 +54,7 @@ const TokenInput: React.FC<{ usdcPrice: number }> = ({ usdcPrice }) => {
       <div className="flex justify-between text-sm text-muted-foreground items-baseline mt-1">
         <span>${priceInUSD.toFixed(2)}</span>
         <span className="text-xs">
-          {MAX_USDC} USDC{" "}
+          {MAX_USDC} USDC{' '}
           <Button
             variant="link"
             className="px-1 text-xs"

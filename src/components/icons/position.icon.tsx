@@ -1,5 +1,5 @@
 const PositionIcon: React.FC<{ color?: string; className?: string }> = ({
-  color = "#732EFE",
+  color = '#732EFE',
   className,
 }) => {
   return (

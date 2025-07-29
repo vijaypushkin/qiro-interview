@@ -1,5 +1,5 @@
-import { AppTooltip } from "../ui/app-tooltip";
-import { Button } from "../ui/button";
+import { AppTooltip } from '../ui/app-tooltip';
+import { Button } from '../ui/button';
 
 const PoolsOverview: React.FC = () => {
   return (
@@ -16,7 +16,7 @@ const PoolsOverview: React.FC = () => {
         <div className="relative mt-2 h-2 w-full rounded-full bg-purple-100">
           <div
             className="absolute left-0 top-0 h-full rounded-full bg-purple-600"
-            style={{ width: "80%" }}
+            style={{ width: '80%' }}
           />
           <span className="absolute right-0 -top-6 text-xs text-purple-600 font-medium">
             80% Filled

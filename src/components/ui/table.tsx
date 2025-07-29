@@ -1,5 +1,6 @@
-import * as React from "react";
-import { cn } from "@/utils/ui.utils";
+import * as React from 'react';
+
+import { cn } from '@/utils/ui.utils';
 
 type Column = {
   key: string;
@@ -8,7 +9,7 @@ type Column = {
 };
 
 type TableProps = {
-  variant?: "default" | "compact";
+  variant?: 'default' | 'compact';
   sortable?: boolean;
   columns: Column[];
   data: Record<string, React.ReactNode>[];
@@ -16,13 +17,13 @@ type TableProps = {
 };
 
 export const Table: React.FC<TableProps> = ({
-  variant = "default",
+  variant = 'default',
   sortable = false,
   columns,
   data,
   toolbar,
 }) => {
-  const cellPadding = variant === "compact" ? "px-2 py-2" : "px-4 py-3";
+  const cellPadding = variant === 'compact' ? 'px-2 py-2' : 'px-4 py-3';
 
   return (
     <div className="space-y-[17px]">
@@ -37,7 +38,7 @@ export const Table: React.FC<TableProps> = ({
               {columns.map((col) => (
                 <th
                   key={col.key}
-                  className={cn(cellPadding, "whitespace-nowrap")}
+                  className={cn(cellPadding, 'whitespace-nowrap')}
                 >
                   {col.label}
                   {sortable && col.sortable && (
@@ -53,7 +54,7 @@ export const Table: React.FC<TableProps> = ({
                 {columns.map((col) => (
                   <td
                     key={col.key}
-                    className={cn(cellPadding, "whitespace-nowrap")}
+                    className={cn(cellPadding, 'whitespace-nowrap')}
                   >
                     {row[col.key]}
                   </td>

@@ -1,15 +1,16 @@
-import { Table } from "@/components/ui/table";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { ExternalLinkIcon } from "lucide-react";
-import { getPoolActivity } from "@/server/get-pool-activity";
+import { ExternalLinkIcon } from 'lucide-react';
+
+import { Avatar, AvatarImage } from '@/components/ui/avatar';
+import { Button } from '@/components/ui/button';
+import { Table } from '@/components/ui/table';
+import { getPoolActivity } from '@/server/get-pool-activity';
 
 const columns = [
-  { key: "wallet", label: "Wallet", sortable: true },
-  { key: "txType", label: "Tx Type", sortable: true },
-  { key: "amount", label: "Amount", sortable: true },
-  { key: "date", label: "Date", sortable: true },
-  { key: "tx", label: "", sortable: false },
+  { key: 'wallet', label: 'Wallet', sortable: true },
+  { key: 'txType', label: 'Tx Type', sortable: true },
+  { key: 'amount', label: 'Amount', sortable: true },
+  { key: 'date', label: 'Date', sortable: true },
+  { key: 'tx', label: '', sortable: false },
 ];
 
 const PoolActivity = async () => {
