@@ -1,11 +1,22 @@
+import React from "react";
+import featureImg from "@/assets/images/pools/pool-feature.png";
+import Image from "next/image";
+
 const FeaturedLoanCard: React.FC = () => {
   return (
     <div className="relative w-full h-[300px] bg-cover bg-center overflow-hidden">
       {/* Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
+      <div className="absolute inset-0">
+        <Image
+          src={featureImg}
+          alt="usa boston buildings"
+          fill={true}
+          objectFit="cover"
+        />
+      </div>
 
       {/* Content */}
-      <div className="absolute inset-0 text-white p-6 flex flex-col justify-between">
+      <div className="absolute inset-0 text-white px-4 py-6 flex flex-col justify-between  mx-auto max-w-(--app-m-w)">
         <div className="space-y-2">
           <button className="text-lg">&larr;</button>
           <p className="text-sm text-muted">Featured Loan</p>

@@ -1,4 +1,5 @@
 import { AssetOverviewSection } from "@/components/pools-page/assets-overview-sec";
+import { DepositSection } from "@/components/pools-page/deposit-section";
 import { FeaturedLoanCard } from "@/components/pools-page/featured-sec";
 import { PoolActivity } from "@/components/pools-page/pool-activity";
 import { PoolHighlightSec } from "@/components/pools-page/pool-highlight-sec";
@@ -9,12 +10,12 @@ import { UnderwritingPartnersSection } from "@/components/pools-page/underwriter
 
 export default function PoolsPage() {
   return (
-    <main className="flex flex-col mx-auto max-w-(--app-m-w)">
+    <main className="flex flex-col">
       <FeaturedLoanCard />
 
-      <div className="flex flex-row md:flex-row-reverse">
-        <div className="w-[520px]">
-          <h2>Input box</h2>
+      <div className="flex flex-col p-4 lg:p-0 lg:flex-row-reverse mt-10 lg:gap-[37px]  mx-auto max-w-(--app-m-w) px-4">
+        <div className="lg:w-[520px] pt-5">
+          <DepositSection />
         </div>
 
         <div className="flex-1 flex flex-col gap-[55px]">
